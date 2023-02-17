@@ -1,6 +1,8 @@
 import { auth, googleAuthProvider } from "../lib/firebase";
 import googleImg from "./google.png";
 import Image from "next/image";
+import { useContext } from "react";
+import { UserContext } from "@/lib/context";
 
 export default function Enter(props) {
   const { user, username } = useContext(UserContext);
