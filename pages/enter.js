@@ -1,4 +1,5 @@
 import { auth, googleAuthProvider } from "../lib/firebase";
+import { signInWithPopup } from "firebase/auth";
 import googleImg from "./google.png";
 import Image from "next/image";
 import { useContext } from "react";
@@ -28,7 +29,7 @@ export default function Enter(props) {
 // Sign in with Google button
 function SignInButton() {
   const signInWithGoogle = async () => {
-    await auth.signInWithPopup(googleAuthProvider);
+    await signInWithPopup(auth, googleAuthProvider);
   };
 
   return (
